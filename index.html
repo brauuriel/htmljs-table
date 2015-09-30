@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>HTML+JS Table</title>
-    <!-- No se han agregado estilos, pero podría ser una buena idea -->
-    <script>
+	<meta charset="UTF-8">
+	<title>table</title>
+	<script>
         /* Datos a mostrar en la tabla */
+        datos = [
+                "No.:",
+                "  Nombres :"
+        ];
+
         nombres = [
                 "Karina Sánchez",
-                "Ricardo Gonzales",
+                "Alejandra Medina",
                 "Alejandro García",
                 "Perla Godinez",
                 "Daniel Lopez",
@@ -21,25 +25,28 @@
                 "Patricia Sanchez",
                 "Braulio Medina",
                 "Enrique García",
-                "Alejandra Medina"
+                "Ricardo Gonzales"
         ];
     </script>
 </head>
-<body>
-    <div class="container">
-        <header>
-            <h1>HTML+JS Table</h1>
-        </header>
-        <table>
-            <!-- Posiblemente se tenga que colocar código HTML a mano que no
-                 es necesario que sea colocado por javascript -->
+<body text-align="center">
+	<div class="container">
+		<header>
+			<h1>HTML + JS Table</h1>
+		</header>
             <script>
-                /* Remplazar la siguiente línea y colocar el código que genere
-                   cada renglón de la tabla */
-                document.write(nombres);
+            for (i=0; i<2; i+=1) {
+            document.write(" "+datos[i])
+            };
             </script>
-        </table>
+		<table border="2px" style="width:12%">
+			<script>
+			for (i=1; i<=14; i+=1) {
+			document.write('<tr><td>'+i+'</td><td>'+nombres[i]+'</td><tr>');
+			}
+			</script>
+		</table>
 
-    </div>
+	</div>
 </body>
 </html>
